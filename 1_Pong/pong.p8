@@ -1,7 +1,6 @@
 pico-8 cartridge // http://www.pico-8.com
 version 42
 __lua__
-
 -- pong
 -- by bbread
 
@@ -141,15 +140,15 @@ function _update_paddle()
                     -- go to center if ball is on the other side
             if ball.dx == -1 then
                 if paddles[i].y < 64 then
-                    -- paddles[i].y += 1
+                    paddles[i].y += 1
                 elseif paddles[i].y > 64 then
-                    -- paddles[i].y -= 1
+                    paddles[i].y -= 1
                 end
             else    -- track the ball if it is on the same side
                 if ball.y < paddles[i].y + paddles[i].height/2 then
-                    -- paddles[i].y -= 1
+                    paddles[i].y -= 1
                 elseif ball.y > paddles[i].y + paddles[i].height/2 then
-                    -- paddles[i].y += 1
+                    paddles[i].y += 1
                 end
             end
         end
