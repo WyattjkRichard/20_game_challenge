@@ -23,6 +23,8 @@ end
 -- can the player hit more then one brick?
 -- 
 
+-- val = mid(val, lwr, upr) -- used to keep value between lower and upper ranges
+
 function _draw_bricks(bricks)
     for brick in all(bricks) do
         brick:draw()
